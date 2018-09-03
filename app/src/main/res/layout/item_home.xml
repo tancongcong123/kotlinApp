@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_margin="@dimen/common_padding_8"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="@dimen/common_padding_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivHeadImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="@dimen/common_padding_8"
+            />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_toRightOf="@id/ivHeadImg"
+            android:textColor="@color/main_text_black"
+            android:textSize="@dimen/common_text_size_26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvCreateTime"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/common_text_size_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvThem"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/common_text_size_20"
+            android:layout_toRightOf="@id/ivHeadImg"
+            android:layout_alignBottom="@id/ivHeadImg"
+            android:layout_marginBottom="3dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/common_text_size_26"
+            android:layout_below="@id/ivHeadImg"
+            android:layout_marginTop="@dimen/common_padding_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/ivPic"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="@dimen/common_padding_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:textColor="@color/main_text_gray_light"
+            android:textSize="@dimen/common_text_size_22"
+            android:layout_below="@id/ivPic"
+            android:layout_marginTop="@dimen/common_padding_8"
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

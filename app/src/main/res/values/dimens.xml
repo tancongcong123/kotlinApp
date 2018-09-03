@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_height">35dp</dimen>
+    <dimen name="common_line_height_20">10dp</dimen>
+    <dimen name="common_line_height">0.5dp</dimen>
+    <dimen name="common_padding_8">8dp</dimen>
+    <dimen name="common_padding_10">10dp</dimen>
+
+    <dimen name="common_text_size_48">24sp</dimen>
+    <dimen name="common_text_size_40">20sp</dimen>
+    <dimen name="common_text_size_36">18sp</dimen>
+    <dimen name="common_text_size_34">17sp</dimen>
+    <dimen name="common_text_size_32">16sp</dimen>
+    <dimen name="common_text_size_30">15sp</dimen>
+    <dimen name="common_text_size_26">13sp</dimen>
+    <dimen name="common_text_size_24">12sp</dimen>
+    <dimen name="common_text_size_22">11sp</dimen>
+    <dimen name="common_text_size_20">10sp</dimen>
+    <dimen name="common_text_size_18">9sp</dimen>
+</resources>

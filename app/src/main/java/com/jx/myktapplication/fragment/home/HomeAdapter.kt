@@ -1,12 +1,16 @@
 package com.jx.myktapplication.fragment.home
 
 import android.content.Context
+import android.content.Intent
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.jx.myktapplication.bean.BangumiBean
 import com.jx.myktapplication.R
+import com.jx.myktapplication.activity.webview.MyWebView
 import com.jx.myktapplication.base.GlideApp
 import kotlinx.android.synthetic.main.item_home.view.*
 
@@ -32,6 +36,13 @@ class HomeAdapter(val context: Context?, private val dataList: List<BangumiBean>
             itemView.tvDesc.text = item.desc
             GlideApp.with(context!!).load(item.owner!!.face).circleCrop().into(itemView.ivHeadImg)
             GlideApp.with(context!!).load(item.pic).fitCenter().into(itemView.ivPic)
+            itemView.setOnClickListener {
+                if (item.redirect_url.isNullOrEmpty()){
+                    MyWebView.openActivity(context, "https://m.bilibili.com/video/av${item.aid}.html")
+                }else{
+                    MyWebView.openActivity(context, item.redirect_url)
+                }
+            }
         }
     }
 }

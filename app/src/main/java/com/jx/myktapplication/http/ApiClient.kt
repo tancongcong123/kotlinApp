@@ -23,11 +23,14 @@ class ApiClient private constructor(){
             .build()
     private var apis: Apis? = null
 
-    private object Holder{
-        val INSTANCE = ApiClient()
-    }
+//    private object Holder{
+//        val INSTANCE = ApiClient()
+//    }
+//    companion object {
+//        val instance by lazy{ Holder.INSTANCE }
+//    }
     companion object {
-        val instance by lazy{ Holder.INSTANCE }
+        fun newInstance() = ApiClient()
     }
 
     fun getApiService(): Apis?{

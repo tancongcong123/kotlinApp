@@ -3,7 +3,6 @@ package com.jx.myktapplication.fragment.home
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.widget.Toast
 import com.jx.myktapplication.base.BaseFragment
 import com.jx.myktapplication.R
 import com.jx.myktapplication.bean.BangumiBean

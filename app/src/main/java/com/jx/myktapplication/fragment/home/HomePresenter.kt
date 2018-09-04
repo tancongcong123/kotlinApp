@@ -17,7 +17,7 @@ class HomePresenter: BasePresenter<HomeView>(){
     fun getContent(){
         mView!!.showProgress()
         currentPage = 0
-        ApiClient.instance.getApiService()!!.getDing()
+        ApiClient.newInstance().getApiService()!!.getDing()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread()).subscribe(object: Observer<DingBean> {
                     override fun onNext(s: DingBean) {

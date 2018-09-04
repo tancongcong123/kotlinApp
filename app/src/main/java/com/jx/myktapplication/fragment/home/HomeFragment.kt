@@ -7,11 +7,11 @@ import android.widget.Toast
 import com.jx.myktapplication.base.BaseFragment
 import com.jx.myktapplication.R
 import com.jx.myktapplication.bean.BangumiBean
-import com.jx.myktapplication.bean.DingBean
 import com.jx.myktapplication.ui.loadmore.AdapterWrapper
 import com.jx.myktapplication.ui.loadmore.LoadMoreListener
 import com.jx.myktapplication.ui.loadmore.SwipeToLoadMore
 import kotlinx.android.synthetic.main.fragment_home.*
+import com.jx.myktapplication.exec.toast
 
 class HomeFragment : BaseFragment<HomeView, HomePresenter>(), HomeView,SwipeRefreshLayout.OnRefreshListener,LoadMoreListener{
     override fun getMoreItems(itemList: List<BangumiBean>?) {
@@ -47,7 +47,7 @@ class HomeFragment : BaseFragment<HomeView, HomePresenter>(), HomeView,SwipeRefr
     }
 
     override fun onFail(error: String?) {
-        Toast.makeText(activity,error,Toast.LENGTH_SHORT).show()
+        context!!.toast(error)
     }
 
     override fun getLayoutID(): Int {

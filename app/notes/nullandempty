@@ -1,0 +1,12 @@
+//类型后面加?表示可为空
+var age: String? = "23"
+//抛出空指针异常
+val ages = age!!.toInt()
+//不做处理返回 null
+val ages1 = age?.toInt()
+//age为空返回-1
+val ages2 = age?.toInt() ?: -1
+
+可能在Android里面加个TODO并不会影响程序运行，可是在Kotlin里面就不一样啦，
+如果你在某个函数的第一行添加TODO的话，那么很抱歉，它不会跳过，然后运行下一行代码。
+那如果真要添加TODO的话，那就只能在函数的最后一行添加了。

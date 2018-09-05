@@ -1,0 +1,21 @@
+有一个主构造函数和多个辅助构造函数，主构造函数是类头的一部分
+1>若主构造函数没有任何注释或可见性修饰符可省略，其不能包含任何，初始化代码可以放在初始化程序快中，前缀为init：
+    class Person(name: String){
+        init{
+            // do something initializtion
+        }
+    }
+2>辅助构造函数是以constructor为关键字：
+    class Person(name: String){
+        init{
+            // do something initial
+        }
+                constructor(name:String,parent Person):this(name)                                                                 {
+                        parent.children.add(this)
+                }
+    }
+3>如没有主构造函数，则每个辅助构造函数必须使用super关键字进行初始化基类型，或委托给另外一个构造函数
+    class MyView: View{
+              constructor(context: Context) : super(context)
+              constructor(context: Context, attrs: AttributeSet): super(context, attrs)
+    }

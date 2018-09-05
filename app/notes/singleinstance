@@ -1,0 +1,19 @@
+kotlin 单例模式
+1 compangin object{
+    fun newInstance() = ApiClient()
+}
+
+lazy 懒汉模式
+val lazyValue: String by lazy{
+    println("just run at the first time")
+    "value"
+}
+类似java
+String lazyValue
+String getLazyValue(){
+    if( lazyValue == null){
+        println("just run at the first time")
+         lazyValue = "value"
+    }
+    return lazyValue
+}

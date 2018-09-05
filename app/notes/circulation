@@ -1,0 +1,9 @@
+kotlin中任何表达式都可以标记一个标签。
+有效标签：abc@，forBar@
+eg：
+loop@ for(i in 1..100){
+    for(j in 1..100){
+        if(…) break@loop
+    }
+}
+标记break为标记跳转到执行点后，进入下一次迭代

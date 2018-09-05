@@ -38,4 +38,9 @@ class SampleClassTest {
     fun switchDataString(){
         println(sampleClass.switchDataString(1445225087,"MM:dd-hh:mm:ss"))
     }
+
+    @Test
+    fun isPalindrome(){
+        sampleClass.isPalindrome("ad")
+    }
 }

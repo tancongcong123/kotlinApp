@@ -53,4 +53,14 @@ class SampleClassTest {
     fun findElement(){
         sampleClass.findElement()
     }
+
+    @Test
+    fun getColor(){
+        sampleClass.getColor()
+    }
+
+    @Test
+    fun regex(){
+        sampleClass.regex()
+    }
 }

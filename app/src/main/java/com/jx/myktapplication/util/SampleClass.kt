@@ -112,4 +112,25 @@ class SampleClass{
         println("str.first()=${str.first()}")
         println("count=${str.count { it=='o' }}")
     }
+
+    fun getColor() {
+        println("name = " + Color.RED.name + "\tordinal = " + Color.RED.ordinal)
+        println("name = " + Color.WHITE.name + "\tordinal = " + Color.WHITE.ordinal)
+        println("name = " + Color.BLACK.name + "\tordinal = " + Color.BLACK.ordinal)
+        println("name = " + Color.GREEN.name + "\tordinal = " + Color.GREEN.ordinal)
+        Color.BLUE.toString()
+        Color.BLUE.print()
+    }
+
+    fun regex(){
+//        val regex = "\\d+".toRegex()
+        val regex = "[a-zA-Z0-9]+".toRegex()
+        val nums = listOf("aaa","123","34D").filter(regex::matches)
+        println("nums = $nums")
+
+        val map = mapOf(0 to "11", 1 to "haha", "hehe" to "22")
+        println("map = $map")
+        println(map.mapValues{(key, value)->"$value"})
+
+    }
 }

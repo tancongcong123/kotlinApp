@@ -43,4 +43,14 @@ class SampleClassTest {
     fun isPalindrome(){
         sampleClass.isPalindrome("ad")
     }
+
+    @Test
+    fun operator(){
+        sampleClass.operator()
+    }
+
+    @Test
+    fun findElement(){
+        sampleClass.findElement()
+    }
 }

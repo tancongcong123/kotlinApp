@@ -20,43 +20,43 @@ class DingBean{
     private var technology: LinkedHashMap<String, BangumiBean>? = null
     private var ent: LinkedHashMap<String, BangumiBean>? = null
 
-    fun getDouga():List<BangumiBean>{
+    private fun getDouga():List<BangumiBean>{
         return iteratorMap(douga!!)
     }
-    fun getTeleplay():List<BangumiBean>{
+    private fun getTeleplay():List<BangumiBean>{
         return iteratorMap(teleplay!!)
     }
-    fun getKichiku():List<BangumiBean>{
+    private fun getKichiku():List<BangumiBean>{
         return iteratorMap(kichiku!!)
     }
-    fun getDance():List<BangumiBean>{
+    private fun getDance():List<BangumiBean>{
         return iteratorMap(dance!!)
     }
-    fun getBangumi():List<BangumiBean>{
+    private fun getBangumi():List<BangumiBean>{
         return iteratorMap(bangumi!!)
     }
-    fun getFashion():List<BangumiBean>{
+    private fun getFashion():List<BangumiBean>{
         return iteratorMap(fashion!!)
     }
-    fun getLife():List<BangumiBean>{
+    private fun getLife():List<BangumiBean>{
         return iteratorMap(life!!)
     }
-    fun getAd():List<BangumiBean>{
+    private fun getAd():List<BangumiBean>{
         return iteratorMap(ad!!)
     }
-    fun getGuochuang():List<BangumiBean>{
+    private fun getGuochuang():List<BangumiBean>{
         return iteratorMap(guochuang!!)
     }
-    fun getMovie():List<BangumiBean>{
+    private fun getMovie():List<BangumiBean>{
         return iteratorMap(movie!!)
     }
-    fun getMusic():List<BangumiBean>{
+    private fun getMusic():List<BangumiBean>{
         return iteratorMap(music!!)
     }
-    fun getTechnology():List<BangumiBean>{
+    private fun getTechnology():List<BangumiBean>{
         return iteratorMap(technology!!)
     }
-    fun getEnt():List<BangumiBean>{
+    private fun getEnt():List<BangumiBean>{
         return iteratorMap(ent!!)
     }
 

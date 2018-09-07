@@ -91,4 +91,25 @@ class SampleClass{
         }
         return 0
     }
+
+    fun operator(){
+        var a = 10
+        var b = 10
+        var c = 10
+        var d = 10
+        println("a++ = ${a++} \t b-- = ${b--} \t ++c = ${++c} \t --d = ${--d}")
+        a++
+        b--
+        ++c
+        --d
+        println("a=$a b=$b c=$c d=$d")
+    }
+
+    fun findElement(){
+        var str = "kotlin very good"
+        var result = str.firstOrNull { it=='e' }
+        println("result=$result")
+        println("str.first()=${str.first()}")
+        println("count=${str.count { it=='o' }}")
+    }
 }

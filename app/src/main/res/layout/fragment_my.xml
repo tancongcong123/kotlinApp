@@ -3,4 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/tvLogin"
+        android:padding="@dimen/common_padding_10"
+        android:textSize="@dimen/common_text_size_26"
+        android:text="login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>

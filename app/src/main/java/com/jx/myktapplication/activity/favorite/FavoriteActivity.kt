@@ -29,6 +29,7 @@ class FavoriteActivity: BaseActivity<FavoriteView, FavoritePresenter>(){
             var user = UserBean()
             user.id = i.toString()
             user.name = "aa"+ i.toString()
+            user.layoutType = if (i%2==0) 0 else 1
             list.add(user)
         }
         return list

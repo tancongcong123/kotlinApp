@@ -1,6 +1,6 @@
 package com.jx.myktapplication.bean
 
-class UserBean{
+class UserBean: BaseBean(){
 
     var id: String =""
         get() = field

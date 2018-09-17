@@ -3,11 +3,12 @@ package com.jx.myktapplication.base
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
+import com.jx.myktapplication.bean.BaseBean
 
-abstract class CommonAdapter<D,T:CommonHolder<D>>(context: Context, dataList: List<D>): RecyclerView.Adapter<T>(){
+abstract class CommonAdapter<D: BaseBean,T:CommonHolder<D>>(context: Context, dataList: List<D>): RecyclerView.Adapter<T>(){
 
     val context = context
-    val dataList = dataList
+    private val dataList = dataList
 
     protected abstract fun onCreateEDunViewHolder(parent: ViewGroup, viewType: Int): T
 
@@ -21,6 +22,10 @@ abstract class CommonAdapter<D,T:CommonHolder<D>>(context: Context, dataList: Li
 
     override fun onBindViewHolder(holder: T, position: Int) {
         holder.bindData(dataList[position], position)
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return dataList[position].layoutType
     }
 
 }

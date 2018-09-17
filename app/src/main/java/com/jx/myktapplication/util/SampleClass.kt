@@ -133,4 +133,6 @@ class SampleClass{
         println(map.mapValues{(key, value)->"$value"})
 
     }
+
+    fun check(a:String, b:String) = a=="a"&&b=="b"
 }

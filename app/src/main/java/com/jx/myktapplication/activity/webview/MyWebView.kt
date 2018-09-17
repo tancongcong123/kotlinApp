@@ -13,8 +13,6 @@ import com.jx.myktapplication.R
 import kotlinx.android.synthetic.main.activity_web.*
 import android.webkit.WebChromeClient
 
-
-
 @Suppress("DEPRECATION")
 class MyWebView: AppCompatActivity(){
 
@@ -87,7 +85,7 @@ class MyWebView: AppCompatActivity(){
 
     companion object {
         fun openActivity(context: Context,url: String){
-            var intent: Intent = Intent(context, MyWebView::class.java)
+            var intent = Intent(context, MyWebView::class.java)
             intent.putExtra("url", url)
             context.startActivity(intent)
         }

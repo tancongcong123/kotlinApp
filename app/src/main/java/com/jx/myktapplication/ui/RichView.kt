@@ -14,6 +14,9 @@ import org.jetbrains.anko.*
 import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
+/**
+ * ANKO custom view
+ */
 class RichView: LinearLayout {
 
     private lateinit var image: ImageView

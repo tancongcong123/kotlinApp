@@ -6,7 +6,7 @@ import com.jx.myktapplication.R
 import com.jx.myktapplication.base.BaseActivity
 import com.jx.myktapplication.fragment.home.HomeFragment
 import com.jx.myktapplication.fragment.my.MyFragment
-import kotlinx.android.synthetic.main.activity_main.*;
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity<MainView, MainPresenter>(), MainView {
 

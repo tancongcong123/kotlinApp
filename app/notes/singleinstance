@@ -3,7 +3,7 @@ kotlin 单例模式
     fun newInstance() = ApiClient()
 }
 
-lazy 懒汉模式
+2 lazy 懒汉模式
 val lazyValue: String by lazy{
     println("just run at the first time")
     "value"
@@ -16,4 +16,101 @@ String getLazyValue(){
          lazyValue = "value"
     }
     return lazyValue
+}
+
+3 object SingletonDemo
+
+java  饿汉式单例
+public class SingletonDemo{
+    private static SingletonDemo instance = new SingletonDemo();
+    private SingletonDemo(){
+    }
+
+    public static SingletonDemo getInstance(){
+        return instance;
+    }
+}
+
+4
+class SingletonDemo private constructor(){
+    companion object{
+        private var instance: SingletonDemo? = null
+            get(){
+                if(field == null){
+                    field = SingletonDemo()
+                }
+                return field
+            }
+        fun get():SingletonDemo{
+            return instance!!
+        }
+    }
+}
+
+java
+public class SingletonDemo{
+    private static SingletonDemo instance;
+    private SingletonDemo(){}
+    public static SingletonDemo getInstance(){
+        if(instance==null){
+            instance = new SingletonDemo()
+        }
+        return instance
+    }
+}
+
+5 线程安全的懒汉式
+class SingletonDemo private constructor(){
+    companion object{
+        private var instance: SingletonDemo? = null
+              get(){
+                   if(field == null){
+                       field = SingletonDemo()
+                   }
+                   return field
+               }
+        @Synchronize
+        fun get():SingletonDemo{
+            return instance!!
+        }
+
+    }
+}
+
+java
+public class SingletonDemo{
+    private static SingletonDemo instance;
+    private SingletonDemo(){}
+    // 使用同步锁
+    public static synchronize SingletonDemo getInstance(){
+        if(instance==null){
+            instance = new SingletonDemo()
+        }
+        return instance
+    }
+}
+
+6双重校验锁式 double check
+class SingletonDemo private constructor(){
+    companion object{
+        val instance: SingletonDemo by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED){
+            SingletonDemo()
+        }
+    }
+}
+java
+public class SingletonDemo{
+    private volatile static SingletonDemo instance;
+    private SingletonDemo(){}
+    // 使用同步锁
+    public static SingletonDemo getInstance(){
+        if(instance==null){
+            synchronize(SingletonDemo.class){
+                if(instance == null){
+                    instance = new SingletonDemo()
+                }
+            }
+        }
+        return instance
+    }
 }

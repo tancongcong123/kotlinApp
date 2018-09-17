@@ -1,5 +1,6 @@
 package com.jx.myktapplication.util
 
+import com.jx.myktapplication.bean.UserBean
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -62,5 +63,14 @@ class SampleClassTest {
     @Test
     fun regex(){
         sampleClass.regex()
+        for (i in 0..10){
+            println("index is $i")
+        }
+    }
+
+    @Test
+    fun check(){
+        assertEquals(true, sampleClass.check("a","b"))
+        assertEquals(false, sampleClass.check("a",""))
     }
 }

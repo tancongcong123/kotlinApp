@@ -46,7 +46,7 @@ class HomeFragment : BaseFragment<HomeView, HomePresenter>(), HomeView,SwipeRefr
     }
 
     override fun onFail(error: String?) {
-        context!!.toast(error)
+        context?.toast(error)
     }
 
     override fun getLayoutID(): Int {
